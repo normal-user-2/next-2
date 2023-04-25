@@ -46,6 +46,7 @@ RUN adduser --system --uid 1001 nextjs
 COPY --from=builder /app/public ./public
 
 COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=nextjs:nodejs /app/package.json /app/yarn.lock* /app/package-lock.json* /app/pnpm-lock.yaml* ./
 
 USER nextjs
 
