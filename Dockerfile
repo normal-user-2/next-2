@@ -4,9 +4,6 @@ RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
 
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV NODE_ENV production
-
 COPY . .
 
 RUN \
